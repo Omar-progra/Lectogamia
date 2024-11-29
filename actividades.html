@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LectoGamia - Actividades</title>
+    <!-- Usamos url_for para cargar el archivo CSS desde la carpeta static -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Encabezado -->
+    <header>
+        <h1>Actividades del Proyecto LectoGamia</h1>
+    </header>
+
+    <!-- Contenido Principal -->
+    <main>
+        <section id="lista-actividades">
+            <h2>Explora las actividades</h2>
+
+            <!-- Actividad 1 -->
+            <div class="actividad">
+                <h3 onclick="toggleActivity('actividad1')">Actividad 1: Detectives de Libros: Resolviendo Misterios Literarios</h3>
+                <p id="actividad1" class="contenido-actividad">Los estudiantes se convierten en detectives literarios que deben resolver el misterio de un libro que ha desaparecido. Utilizando habilidades de lectura crítica, deben encontrar pistas y descubrir al culpable.</p>
+            </div>
+
+            <!-- Actividad 2 -->
+            <div class="actividad">
+                <h3 onclick="toggleActivity('actividad2')">Actividad 2: Juegos de Comprensión Lectora</h3>
+                <p id="actividad2" class="contenido-actividad">Esta actividad utiliza juegos de comprensión lectora, donde los estudiantes deben responder preguntas de opción múltiple basadas en textos cortos. Los puntajes se acumulan para motivar la competencia amistosa entre compañeros.</p>
+            </div>
+
+            <!-- Actividad 3 -->
+            <div class="actividad">
+                <h3 onclick="toggleActivity('actividad3')">Actividad 3: El Reto del Saber: Competencia de Comprensión Lectora</h3>
+                <p id="actividad3" class="contenido-actividad">Los estudiantes se organizan en equipos y trabajan juntos para responder preguntas sobre los textos leídos. Se fomenta la colaboración y la competencia sana entre los equipos.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Botón de Regreso -->
+    <footer>
+        <!-- Usamos url_for para la ruta al index -->
+        <a href="index.html" class="button">Volver a la página principal</a>
+    </footer>
+
+    <!-- Script para mostrar/ocultar actividades -->
+    <script>
+        function toggleActivity(id) {
+            var element = document.getElementById(id);
+            element.style.display = (element.style.display === 'none' || element.style.display === '') ? 'block' : 'none';
+        }
+    </script>
+</body>
+</html>
