@@ -1,0 +1,233 @@
+/* Reset de estilos básicos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Estilos del encabezado */
+/* Estilos del encabezado con imagen de fondo */
+header {
+    background-image: url('fondo.jpg'); /* Cambia 'fondo.jpg' por el nombre de tu archivo */
+    background-size: cover; /* Ajusta la imagen para cubrir todo el encabezado */
+    background-position: center; /* Centra la imagen en el encabezado */
+    color: white;
+    padding: 40px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Agrega sombra al texto para mayor legibilidad */
+}
+
+header p {
+    margin-top: 10px;
+    max-width: 600px;
+    margin: 10px auto;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Sombra para el párrafo */
+}
+
+
+/* Menú de navegación */
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+}
+
+nav ul li a:hover {
+    background-color: #4CAF50;
+}
+
+/* Sección principal */
+main {
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+main h2 {
+    color: #4CAF50;
+    margin-bottom: 10px;
+}
+
+main p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+/* Estilo para la imagen con botón de interacción */
+.video-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px; /* Opcional: añade un margen superior para separar el video del contenido anterior */
+}
+
+
+
+.imagen-container img {
+    max-width: 100%;
+    height: auto;
+}
+
+.imagen-container button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.imagen-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px; /* Opcional: añade un margen superior para separar la imagen del contenido anterior */
+}
+
+.imagen-container button:hover {
+    background-color: #333;
+}
+
+/* Estilos de actividades en actividades.html */
+/* Estilos para el contenido de cada actividad */
+.contenido-actividad {
+    display: none; /* Oculta el contenido de la actividad por defecto */
+    margin-top: 10px;
+    line-height: 1.6;
+}
+#lista-actividades {
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.actividad {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.actividad h3 {
+    color: #4CAF50;
+}
+
+.actividad p {
+    margin-top: 5px;
+    line-height: 1.6;
+}
+
+/* Botón de regreso */
+footer .button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+footer .button:hover {
+    background-color: #333;
+}
+
+/* Pie de página */
+footer {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+/* Centrado del botón */
+button {
+    display: block; /* Hace que el botón se comporte como un bloque */
+    margin: 20px auto; /* Centra el botón horizontalmente y le da un margen superior */
+    padding: 10px 20px; /* Espaciado interno del botón */
+    font-size: 16px; /* Tamaño de fuente */
+    color: white; /* Color del texto */
+    background-color: #4CAF50; /* Color de fondo verde */
+    border: none; /* Elimina los bordes por defecto */
+    border-radius: 8px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor a mano cuando pasa sobre el botón */
+    transition: background-color 0.3s ease; /* Efecto de transición suave */
+}
+
+/* Efecto al pasar el mouse sobre el botón */
+button:hover {
+    background-color: #45a049; /* Un tono de verde más oscuro */
+}
+
+/* Estilo del contenedor del botón (opcional) */
+main {
+    text-align: center; /* Alinea el contenido en el centro */
+    padding-top: 30px; /* Espaciado superior */
+}
+
+/* Estilo básico para el formulario */
+form {
+    width: 300px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #45a049;
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+}
+
+footer a {
+    text-decoration: none;
+    color: #4CAF50;
+    font-weight: bold;
+}
+

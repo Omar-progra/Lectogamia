@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LectoGamia - Página Principal</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script>
+        function mostrarMensaje() {
+            alert("Gracias por estar en LectoGamia");
+        }
+    </script>
+</head>
+<body>
+    <!-- Encabezado -->
+    <header>
+        <h1>Bienvenidos a LectoGamia</h1>
+        <p class="intro-text">Descubre cómo convertir la lectura en una aventura emocionante con LectoGamia, el prototipo que combina juegos y desafíos para desarrollar habilidades de lectura crítica.</p>
+    </header>
+
+    <!-- Menú de Navegación -->
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('inicio') }}">Inicio</a></li>
+            <li><a href="{{ url_for('objetivo') }}">Objetivo</a></li>
+            <li><a href="{{ url_for('actividades') }}">Actividades</a></li>
+            <li><a href="{{ url_for('contacto') }}">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <!-- Sección de Contenido -->
+    <main>
+        <section id="introduccion">
+            <h2>Introducción a LectoGamia</h2>
+            <p>LectoGamia es una innovadora propuesta educativa que transforma el aprendizaje de la lectura crítica en una experiencia interactiva y divertida. Diseñado como un prototipo de gamificación, LectoGamia combina juegos, desafíos y actividades para motivar a los estudiantes a desarrollar habilidades de lectura crítica de manera efectiva. A través de esta metodología, los estudiantes no solo aprenden y comprenden, sino que también analizan y cuestionan de manera activa, involucrándose en una "aventura de lectura" que hace del aprendizaje una experiencia más significativa y motivadora.</p>
+        </section>
+
+        <!-- Video -->
+        <div class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/nupcsJ0SHj8" title="LectoGamia en acción" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+        <!-- Botón Interactivo -->
+        <button onclick="mostrarMensaje()">Haz clic aquí</button>
+    </main>
+
+
+    <!-- Pie de Página -->
+    <footer>
+        <p>&copy; 2024 LectoGamia - Hecho con <span style="color: red;">&hearts;</span> por Omar Lambraño</p>
+    </footer>
+</body>
+</html>

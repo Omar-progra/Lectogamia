@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LectoGamia - Objetivo del Proyecto</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <!-- Encabezado -->
+    <header>
+        <h1>Objetivo del Proyecto LectoGamia</h1>
+    </header>
+
+    <!-- Contenido de la Página -->
+    <main>
+        <section id="objetivo">
+            <h2>Objetivo de LectoGamia</h2>
+            <p>El objetivo del proyecto LectoGamia es mejorar las habilidades de lectura crítica de los estudiantes de cuarto grado a través de una estrategia educativa basada en la gamificación. Con el uso de dinámicas de juego, se busca motivar a los estudiantes y fomentar un ambiente de aprendizaje activo y participativo que enriquezca sus competencias lectoras y de pensamiento crítico.</p>
+        </section>
+
+         <!-- Imagen interactiva -->
+        <div class="imagen-container">
+            <!-- Usamos url_for para cargar la imagen desde la carpeta static -->
+            <img src="{{ url_for('static', filename='descarga.jpg') }}" alt="Estructura de la actividad LectoGamia">
+        </div>
+
+    </main>
+
+    <!-- Botón de Regreso -->
+    <footer>
+        <a href="inicio" class="button">Volver a la página principal</a>
+    </footer>
+</body>
+</html>
