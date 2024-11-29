@@ -4,16 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LectoGamia - Actividades</title>
-    <!-- Usamos url_for para cargar el archivo CSS desde la carpeta static -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Encabezado -->
     <header>
         <h1>Actividades del Proyecto LectoGamia</h1>
     </header>
 
-    <!-- Contenido Principal -->
     <main>
         <section id="lista-actividades">
             <h2>Explora las actividades</h2>
@@ -22,33 +19,63 @@
             <div class="actividad">
                 <h3 onclick="toggleActivity('actividad1')">Actividad 1: Detectives de Libros: Resolviendo Misterios Literarios</h3>
                 <p id="actividad1" class="contenido-actividad">Los estudiantes se convierten en detectives literarios que deben resolver el misterio de un libro que ha desaparecido. Utilizando habilidades de lectura crítica, deben encontrar pistas y descubrir al culpable.</p>
+                <p><strong>Fragmento:</strong> El libro de aventuras estaba en la estantería de la biblioteca. Un día, al volver a la biblioteca, el libro desapareció. Nadie vio nada extraño, pero el bibliotecario había mencionado que alguien había estado buscando el libro días antes. La página 47, que contenía un mapa del tesoro, había sido arrancada del libro. Sin embargo, un pedazo de la página apareció en la ventana.</p>
+                <form id="form-actividad1" style="display: none;">
+                    <label for="respuesta1">¿Quién o qué podría haber causado la desaparición del libro? Explica tu razonamiento usando las pistas que tienes:</label>
+                    <textarea id="respuesta1" rows="4" placeholder="Escribe aquí tu respuesta..."></textarea>
+                    <button type="button" onclick="guardarRespuesta('respuesta1', 'form-actividad1')">Guardar Respuesta</button>
+                </form>
             </div>
 
             <!-- Actividad 2 -->
             <div class="actividad">
                 <h3 onclick="toggleActivity('actividad2')">Actividad 2: Juegos de Comprensión Lectora</h3>
-                <p id="actividad2" class="contenido-actividad">Esta actividad utiliza juegos de comprensión lectora, donde los estudiantes deben responder preguntas de opción múltiple basadas en textos cortos. Los puntajes se acumulan para motivar la competencia amistosa entre compañeros.</p>
+                <p id="actividad2" class="contenido-actividad">Esta actividad utiliza juegos de comprensión lectora, donde los estudiantes deben responder preguntas de opción múltiple basadas en textos cortos.</p>
+                <p><strong>Texto:</strong> La historia de la princesa y el dragón es uno de los relatos más antiguos del mundo. En este cuento, la princesa debe enfrentarse a un dragón que ha secuestrado a su pueblo. Con la ayuda de un valiente caballero, la princesa lucha contra el dragón, pero no todo es lo que parece. Durante la batalla, la princesa descubre que el dragón tiene un corazón noble y que fue manipulado por un malvado hechicero.</p>
+                <form id="form-actividad2" style="display: none;">
+                    <label for="respuesta2">¿Cuál es el tema principal del texto?</label>
+                    <input type="text" id="respuesta2" placeholder="Escribe aquí tu respuesta...">
+                    <button type="button" onclick="guardarRespuesta('respuesta2', 'form-actividad2')">Guardar Respuesta</button>
+                </form>
             </div>
 
             <!-- Actividad 3 -->
             <div class="actividad">
                 <h3 onclick="toggleActivity('actividad3')">Actividad 3: El Reto del Saber: Competencia de Comprensión Lectora</h3>
-                <p id="actividad3" class="contenido-actividad">Los estudiantes se organizan en equipos y trabajan juntos para responder preguntas sobre los textos leídos. Se fomenta la colaboración y la competencia sana entre los equipos.</p>
+                <p id="actividad3" class="contenido-actividad">Los estudiantes se organizan en equipos o de manera individual para responder preguntas sobre un texto leído. Esta actividad fomenta el trabajo en equipo y la reflexión crítica sobre el contenido del texto.</p>
+                <p><strong>Texto:</strong> El sol se estaba poniendo sobre la granja, y los animales comenzaban a reunirse en sus corrales. El granjero, cansado de un largo día de trabajo, se dirigió hacia la casa para descansar. Mientras tanto, la vaca, que siempre había sido curiosa, observaba cómo el granjero se alejaba. Decidió dar un paseo por el campo para explorar lo que había más allá del granero.</p>
+                <form id="form-actividad3" style="display: none;">
+                    <label for="respuesta3">1. ¿Por qué la vaca decidió dar un paseo?</label>
+                    <input type="text" id="respuesta3" placeholder="Escribe aquí tu respuesta...">
+
+                    <label for="respuesta4">2. ¿Qué estaba haciendo el granjero cuando el sol se ponía?</label>
+                    <input type="text" id="respuesta4" placeholder="Escribe aquí tu respuesta...">
+
+                    <button type="button" onclick="guardarRespuesta('respuesta3', 'form-actividad3')">Guardar Respuestas</button>
+                </form>
             </div>
+
         </section>
     </main>
 
-    <!-- Botón de Regreso -->
     <footer>
-        <!-- Usamos url_for para la ruta al index -->
         <a href="index.html" class="button">Volver a la página principal</a>
     </footer>
 
-    <!-- Script para mostrar/ocultar actividades -->
     <script>
         function toggleActivity(id) {
             var element = document.getElementById(id);
             element.style.display = (element.style.display === 'none' || element.style.display === '') ? 'block' : 'none';
+        }
+
+        function guardarRespuesta(id, formId) {
+            var respuesta = document.getElementById(id).value;
+            if (respuesta) {
+                alert('Respuesta guardada: ' + respuesta);
+                document.getElementById(formId).style.display = 'none';
+            } else {
+                alert('Por favor, escribe una respuesta antes de guardar.');
+            }
         }
     </script>
 </body>
