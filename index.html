@@ -10,7 +10,14 @@
         if (localStorage.getItem("loggedIn") !== "true") {
             window.location.href = "login.html"; // Si no ha iniciado sesión, redirige al login
         }
+
+        // Función para cerrar sesión
+        function cerrarSesion() {
+            localStorage.removeItem("loggedIn"); // Elimina el estado de sesión
+            window.location.href = "login.html"; // Redirige al login
+        }
     </script>
+       
     <script>
         function mostrarMensaje() {
             alert("Gracias por estar en LectoGamia");
