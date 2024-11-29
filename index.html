@@ -6,13 +6,19 @@
     <title>LectoGamia - Página Principal</title>
     <link rel="stylesheet" href="style.css">
     <script>
+        // Verificar si el usuario ha iniciado sesión
+        if (localStorage.getItem("loggedIn") !== "true") {
+            window.location.href = "login.html"; // Si no ha iniciado sesión, redirige al login
+        }
+    </script>
+    <script>
         function mostrarMensaje() {
             alert("Gracias por estar en LectoGamia");
         }
     </script>
 </head>
 <body>
-    <!-- Encabezado -->
+    <!-- Mensaje de respaldo si la redirección no funciona -->
     <header>
         <h1>Bienvenidos a LectoGamia</h1>
         <p class="intro-text">Descubre cómo convertir la lectura en una aventura emocionante con LectoGamia, el prototipo que combina juegos y desafíos para desarrollar habilidades de lectura crítica.</p>

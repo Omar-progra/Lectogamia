@@ -5,6 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LectoGamia - Iniciar Sesión</title>
     <link rel="stylesheet" href="style.css">
+    <script>
+        // Verificar si ya ha iniciado sesión
+        if (localStorage.getItem("loggedIn") === "true") {
+            window.location.href = "index.html"; // Redirige a la página principal si ya ha iniciado sesión
+        }
+
+        // Guardar el estado de inicio de sesión cuando el usuario ingrese
+        function iniciarSesion() {
+            localStorage.setItem("loggedIn", "true");
+            window.location.href = "index.html"; // Redirige a la página principal
+        }
+    </script>
 </head>
 <body>
     <header>
@@ -12,7 +24,7 @@
     </header>
 
     <main>
-        <form action="index.html" method="GET">
+        <form onsubmit="event.preventDefault(); iniciarSesion();">
             <label for="nombre">Nombre del Estudiante:</label>
             <input type="text" id="nombre" name="nombre" required>
             <br><br>
