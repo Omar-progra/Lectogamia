@@ -7,10 +7,12 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Encabezado -->
     <header>
         <h1>Actividades del Proyecto LectoGamia</h1>
     </header>
 
+    <!-- Contenido Principal -->
     <main>
         <section id="lista-actividades">
             <h2>Explora las actividades</h2>
@@ -18,65 +20,101 @@
             <!-- Actividad 1 -->
             <div class="actividad">
                 <h3 onclick="toggleActivity('actividad1')">Actividad 1: Detectives de Libros: Resolviendo Misterios Literarios</h3>
-                <p id="actividad1" class="contenido-actividad">Los estudiantes se convierten en detectives literarios que deben resolver el misterio de un libro que ha desaparecido. Utilizando habilidades de lectura crítica, deben encontrar pistas y descubrir al culpable.</p>
-                <p><strong>Fragmento:</strong> El libro de aventuras estaba en la estantería de la biblioteca. Un día, al volver a la biblioteca, el libro desapareció. Nadie vio nada extraño, pero el bibliotecario había mencionado que alguien había estado buscando el libro días antes. La página 47, que contenía un mapa del tesoro, había sido arrancada del libro. Sin embargo, un pedazo de la página apareció en la ventana.</p>
+                <p id="actividad1" class="contenido-actividad">Fragmento: El libro de aventuras estaba en la estantería de la biblioteca. Un día, al volver a la biblioteca, el libro desapareció. Nadie vio nada extraño, pero el bibliotecario había mencionado que alguien había estado buscando el libro días antes. La página 47, que contenía un mapa del tesoro, había sido arrancada del libro. Sin embargo, un pedazo de la página apareció en la ventana.. Pregunta : ¿Quién o qué podría haber causado la desaparición del libro? Explica tu razonamiento usando las pistas que tienes.</p>
                 <form id="form-actividad1" style="display: none;">
-                    <label for="respuesta1">¿Quién o qué podría haber causado la desaparición del libro? Explica tu razonamiento usando las pistas que tienes:</label>
+                    <label for="respuesta1">Escribe tu solución al misterio:</label>
                     <textarea id="respuesta1" rows="4" placeholder="Escribe aquí tu respuesta..."></textarea>
                     <button type="button" onclick="guardarRespuesta('respuesta1', 'form-actividad1')">Guardar Respuesta</button>
                 </form>
             </div>
 
             <!-- Actividad 2 -->
-            <div class="actividad">
-                <h3 onclick="toggleActivity('actividad2')">Actividad 2: Juegos de Comprensión Lectora</h3>
-                <p id="actividad2" class="contenido-actividad">Esta actividad utiliza juegos de comprensión lectora, donde los estudiantes deben responder preguntas de opción múltiple basadas en textos cortos.</p>
-                <p><strong>Texto:</strong> La historia de la princesa y el dragón es uno de los relatos más antiguos del mundo. En este cuento, la princesa debe enfrentarse a un dragón que ha secuestrado a su pueblo. Con la ayuda de un valiente caballero, la princesa lucha contra el dragón, pero no todo es lo que parece. Durante la batalla, la princesa descubre que el dragón tiene un corazón noble y que fue manipulado por un malvado hechicero.</p>
-                <form id="form-actividad2" style="display: none;">
-                    <label for="respuesta2">¿Cuál es el tema principal del texto?</label>
-                    <input type="text" id="respuesta2" placeholder="Escribe aquí tu respuesta...">
-                    <button type="button" onclick="guardarRespuesta('respuesta2', 'form-actividad2')">Guardar Respuesta</button>
-                </form>
-            </div>
+<div class="actividad">
+    <h3 onclick="toggleActivity('actividad2')">Actividad 2: Juegos de Comprensión Lectora</h3>
+    <p id="actividad2" class="contenido-actividad">Esta actividad utiliza juegos de comprensión lectora, donde los estudiantes deben responder preguntas de opción múltiple basadas en textos cortos.</p>
+    <p><strong>Texto:</strong> La historia de la princesa y el dragón es uno de los relatos más antiguos del mundo. En este cuento, la princesa debe enfrentarse a un dragón que ha secuestrado a su pueblo. Con la ayuda de un valiente caballero, la princesa lucha contra el dragón, pero no todo es lo que parece. Durante la batalla, la princesa descubre que el dragón tiene un corazón noble y que fue manipulado por un malvado hechicero.</p>
+
+    <form id="form-actividad2" style="display: none;">
+        <label for="respuesta2">¿Cuál es el tema principal del texto?</label><br>
+        
+        <input type="radio" id="opcionA" name="respuesta2" value="a">
+        <label for="opcionA">a) La lucha entre el bien y el mal.</label><br>
+        
+        <input type="radio" id="opcionB" name="respuesta2" value="b">
+        <label for="opcionB">b) La amistad entre la princesa y el dragón.</label><br>
+        
+        <input type="radio" id="opcionC" name="respuesta2" value="c">
+        <label for="opcionC">c) La princesa y el caballero derrotaron al hechicero.</label><br>
+
+        <button type="button" onclick="guardarRespuesta('respuesta2', 'form-actividad2')">Guardar Respuesta</button>
+    </form>
+</div>
 
             <!-- Actividad 3 -->
-            <div class="actividad">
-                <h3 onclick="toggleActivity('actividad3')">Actividad 3: El Reto del Saber: Competencia de Comprensión Lectora</h3>
-                <p id="actividad3" class="contenido-actividad">Los estudiantes se organizan en equipos o de manera individual para responder preguntas sobre un texto leído. Esta actividad fomenta el trabajo en equipo y la reflexión crítica sobre el contenido del texto.</p>
-                <p><strong>Texto:</strong> El sol se estaba poniendo sobre la granja, y los animales comenzaban a reunirse en sus corrales. El granjero, cansado de un largo día de trabajo, se dirigió hacia la casa para descansar. Mientras tanto, la vaca, que siempre había sido curiosa, observaba cómo el granjero se alejaba. Decidió dar un paseo por el campo para explorar lo que había más allá del granero.</p>
-                <form id="form-actividad3" style="display: none;">
-                    <label for="respuesta3">1. ¿Por qué la vaca decidió dar un paseo?</label>
-                    <input type="text" id="respuesta3" placeholder="Escribe aquí tu respuesta...">
+<div class="actividad">
+    <h3 onclick="toggleActivity('actividad3')">Actividad 3: El Reto del Saber: Competencia de Comprensión Lectora</h3>
+    <p id="actividad3" class="contenido-actividad">Los estudiantes se organizan en equipos o de manera individual para responder preguntas sobre un texto leído. Esta actividad fomenta el trabajo en equipo y la reflexión crítica sobre el contenido del texto.</p>
+    <p><strong>Texto:</strong></p>
+    <p>"El sol se estaba poniendo sobre la granja, y los animales comenzaban a reunirse en sus corrales. El granjero, cansado de un largo día de trabajo, se dirigió hacia la casa para descansar. Mientras tanto, la vaca, que siempre había sido curiosa, observaba cómo el granjero se alejaba. Decidió dar un paseo por el campo para explorar lo que había más allá del granero."</p>
 
-                    <label for="respuesta4">2. ¿Qué estaba haciendo el granjero cuando el sol se ponía?</label>
-                    <input type="text" id="respuesta4" placeholder="Escribe aquí tu respuesta...">
+    <!-- Pregunta 1 -->
+    <form id="form-actividad3" style="display: none;">
+        <p><strong>Pregunta 1:</strong> ¿Por qué la vaca decidió dar un paseo?</p>
+        
+        <input type="radio" id="opcionA1" name="respuesta1" value="a">
+        <label for="opcionA1">a) Porque estaba aburrida.</label><br>
+        
+        <input type="radio" id="opcionB1" name="respuesta1" value="b">
+        <label for="opcionB1">b) Porque quería explorar más allá del granero.</label><br>
+        
+        <input type="radio" id="opcionC1" name="respuesta1" value="c">
+        <label for="opcionC1">c) Porque estaba cansada de estar en el corral.</label><br>
 
-                    <button type="button" onclick="guardarRespuesta('respuesta3', 'form-actividad3')">Guardar Respuestas</button>
-                </form>
-            </div>
+        <br>
 
-        </section>
-    </main>
+        <!-- Pregunta 2 -->
+        <p><strong>Pregunta 2:</strong> ¿Qué estaba haciendo el granjero cuando el sol se ponía?</p>
+        
+        <input type="radio" id="opcionA2" name="respuesta2" value="a">
+        <label for="opcionA2">a) Trabajando en el campo.</label><br>
+        
+        <input type="radio" id="opcionB2" name="respuesta2" value="b">
+        <label for="opcionB2">b) Se dirigía a la casa.</label><br>
+        
+        <input type="radio" id="opcionC2" name="respuesta2" value="c">
+        <label for="opcionC2">c) Reuniendo a los animales.</label><br>
 
+        <button type="button" onclick="guardarRespuesta('respuesta1', 'form-actividad3')">Guardar Respuesta</button>
+    </form>
+</div>
+
+
+    <!-- Botón de Regreso -->
     <footer>
         <a href="index.html" class="button">Volver a la página principal</a>
     </footer>
 
+    <!-- Script para mostrar/ocultar actividades y guardar respuestas -->
     <script>
         function toggleActivity(id) {
             var element = document.getElementById(id);
-            element.style.display = (element.style.display === 'none' || element.style.display === '') ? 'block' : 'none';
+            var formElement = document.getElementById('form-' + id);
+            var isHidden = element.style.display === 'none' || element.style.display === '';
+            element.style.display = isHidden ? 'block' : 'none';
+            formElement.style.display = isHidden ? 'block' : 'none';
         }
 
-        function guardarRespuesta(id, formId) {
-            var respuesta = document.getElementById(id).value;
-            if (respuesta) {
-                alert('Respuesta guardada: ' + respuesta);
-                document.getElementById(formId).style.display = 'none';
-            } else {
-                alert('Por favor, escribe una respuesta antes de guardar.');
+        function guardarRespuesta(respuestaId, formId) {
+            var respuesta = document.getElementById(respuestaId).value;
+            if (respuesta.trim() === '') {
+                alert("Por favor, escribe una respuesta antes de guardar.");
+                return;
             }
+
+            alert("¡Respuesta guardada con éxito!");
+            document.getElementById(formId).style.display = 'none'; // Ocultamos el formulario después de guardar la respuesta.
         }
+        
     </script>
 </body>
 </html>
