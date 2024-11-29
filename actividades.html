@@ -120,6 +120,28 @@
             alert("¡Respuesta guardada con éxito!");
             document.getElementById(formId).style.display = 'none'; // Ocultamos el formulario después de guardar la respuesta.
         }
+
+        function guardarRespuesta(respuestaId, formId) {
+    var respuesta = '';
+    
+    // Si es una respuesta de radio (como en la actividad 2), obtenemos el valor de la opción seleccionada.
+    var opciones = document.getElementsByName(respuestaId);
+    for (var i = 0; i < opciones.length; i++) {
+        if (opciones[i].checked) {
+            respuesta = opciones[i].value;
+            break;
+        }
+    }
+
+    if (respuesta.trim() === '') {
+        alert("Por favor, selecciona una opción antes de guardar.");
+        return;
+    }
+
+    alert("¡Respuesta guardada con éxito!");
+    document.getElementById(formId).style.display = 'none'; // Ocultamos el formulario después de guardar la respuesta.
+}
+
         
     </script>
 </body>
