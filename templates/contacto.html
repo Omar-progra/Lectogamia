@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LectoGamia - Contacto</title>
+    <!-- Usamos url_for para cargar el archivo CSS desde la carpeta static -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <!-- Encabezado -->
+    <header>
+        <h1>Contacto</h1>
+        <p>Puedes ponerte en contacto con nosotros a través de los siguientes medios:</p>
+    </header>
+
+    <!-- Contenido Principal -->
+    <main>
+        <section id="info-contacto">
+            <h2>Información de Contacto</h2>
+            <p><strong>Correo Electrónico:</strong> contacto@lectogamia.com</p>
+            <p><strong>Teléfono:</strong> +57 123 456 7890</p>
+        </section>
+    </main>
+
+    <!-- Botón de Regreso -->
+    <footer>
+        <!-- Usamos url_for para la ruta al index -->
+        <a href="{{ url_for('inicio') }}" class="button">Volver a la página principal</a>
+    </footer>
+</body>
+</html>
